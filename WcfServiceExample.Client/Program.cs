@@ -1,9 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
+using System.Runtime.InteropServices;
+using System.ServiceModel.Security;
 using System.Text;
 using System.Threading.Tasks;
-using WcfServiceExample.Client.ServiceReference1;
+using WcfServiceExample.Client.Connected_Services.ServiceReferenceClient;
 
 namespace WcfServiceExample.Client
 {
@@ -12,6 +13,9 @@ namespace WcfServiceExample.Client
         static void Main(string[] args)
         {
             PeopleServiceClient peopleServiceClient = new PeopleServiceClient();
+            peopleServiceClient.ClientCredentials.ServiceCertificate.Authentication.CertificateValidationMode = X509CertificateValidationMode.None;
+            peopleServiceClient.ClientCredentials.UserName.UserName = "michal";
+            peopleServiceClient.ClientCredentials.UserName.Password = "michal";
 
             var person = new Person
             {

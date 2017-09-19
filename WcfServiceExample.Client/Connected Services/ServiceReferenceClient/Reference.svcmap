@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="30629011-5a8a-4ec2-be06-52e1aefbb3a5" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://localhost:7243/PeopleService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="PeopleService.xsd" MetadataType="Schema" ID="769b2907-75e5-4fd6-9817-2762a6a3cfc9" SourceId="1" SourceUrl="http://localhost:7243/PeopleService.svc?xsd=xsd2" />
+    <MetadataFile FileName="PeopleService1.xsd" MetadataType="Schema" ID="c53a4300-3eb9-4a3b-8e45-c0594e352a72" SourceId="1" SourceUrl="http://localhost:7243/PeopleService.svc?xsd=xsd1" />
+    <MetadataFile FileName="PeopleService.wsdl" MetadataType="Wsdl" ID="52b0d08c-eee5-4638-bf84-2b4558f3b9de" SourceId="1" SourceUrl="http://localhost:7243/PeopleService.svc?wsdl" />
+    <MetadataFile FileName="PeopleService.disco" MetadataType="Disco" ID="85c5654e-55af-414a-b8b1-e9759c188542" SourceId="1" SourceUrl="http://localhost:7243/PeopleService.svc?disco" />
+    <MetadataFile FileName="PeopleService2.xsd" MetadataType="Schema" ID="324f342d-fe08-4c3e-9947-249fdf1bcbe6" SourceId="1" SourceUrl="http://localhost:7243/PeopleService.svc?xsd=xsd0" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,6 +1,6 @@
 ﻿using System.Runtime.Serialization;
 
-namespace WcfServiceExample.Service
+namespace WcfServiceExample.PeopleService.Model
 {
     [DataContract]
     public class Person

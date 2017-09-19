@@ -1,6 +1,6 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
-  <xs:import namespace="http://schemas.datacontract.org/2004/07/WcfServiceExample.Service" />
+  <xs:import schemaLocation="http://localhost:7243/PeopleService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/WcfServiceExample.PeopleService.Model" />
   <xs:element name="GetPerson">
     <xs:complexType>
       <xs:sequence>
@@ -11,14 +11,14 @@
   <xs:element name="GetPersonResponse">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WcfServiceExample.Service" minOccurs="0" name="GetPersonResult" nillable="true" type="q1:Person" />
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/WcfServiceExample.PeopleService.Model" minOccurs="0" name="GetPersonResult" nillable="true" type="q1:Person" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>
   <xs:element name="AddPerson">
     <xs:complexType>
       <xs:sequence>
-        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WcfServiceExample.Service" minOccurs="0" name="person" nillable="true" type="q2:Person" />
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/WcfServiceExample.PeopleService.Model" minOccurs="0" name="person" nillable="true" type="q2:Person" />
       </xs:sequence>
     </xs:complexType>
   </xs:element>

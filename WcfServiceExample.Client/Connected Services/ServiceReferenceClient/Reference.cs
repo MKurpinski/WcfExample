@@ -8,27 +8,26 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace WcfServiceExample.Client.ServiceReference1 {
-    using System.Runtime.Serialization;
-    using System;
-    
-    
+using System;
+using System.Runtime.Serialization;
+
+namespace WcfServiceExample.Client.Connected_Services.ServiceReferenceClient {
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.Runtime.Serialization", "4.0.0.0")]
-    [System.Runtime.Serialization.DataContractAttribute(Name="Person", Namespace="http://schemas.datacontract.org/2004/07/WcfServiceExample.Service")]
-    [System.SerializableAttribute()]
+    [DataContract(Name="Person", Namespace="http://schemas.datacontract.org/2004/07/WcfServiceExample.PeopleService.Model")]
+    [Serializable()]
     public partial class Person : object, System.Runtime.Serialization.IExtensibleDataObject, System.ComponentModel.INotifyPropertyChanged {
         
-        [System.NonSerializedAttribute()]
+        [NonSerialized()]
         private System.Runtime.Serialization.ExtensionDataObject extensionDataField;
         
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
-        private string _firstNameField;
+        [OptionalField()]
+        private string FirstNameField;
         
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        [OptionalField()]
         private int IdField;
         
-        [System.Runtime.Serialization.OptionalFieldAttribute()]
+        [OptionalField()]
         private string LastNameField;
         
         [global::System.ComponentModel.BrowsableAttribute(false)]
@@ -41,20 +40,20 @@ namespace WcfServiceExample.Client.ServiceReference1 {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute()]
+        [DataMember()]
         public string FirstName {
             get {
-                return this._firstNameField;
+                return this.FirstNameField;
             }
             set {
-                if ((object.ReferenceEquals(this._firstNameField, value) != true)) {
-                    this._firstNameField = value;
-                    this.RaisePropertyChanged("FirsName");
+                if ((object.ReferenceEquals(this.FirstNameField, value) != true)) {
+                    this.FirstNameField = value;
+                    this.RaisePropertyChanged("FirstName");
                 }
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute()]
+        [DataMember()]
         public int Id {
             get {
                 return this.IdField;
@@ -67,7 +66,7 @@ namespace WcfServiceExample.Client.ServiceReference1 {
             }
         }
         
-        [System.Runtime.Serialization.DataMemberAttribute()]
+        [DataMember()]
         public string LastName {
             get {
                 return this.LastNameField;
@@ -91,29 +90,29 @@ namespace WcfServiceExample.Client.ServiceReference1 {
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference1.IPeopleService")]
+    [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReferenceClient.IPeopleService")]
     public interface IPeopleService {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPeopleService/GetPerson", ReplyAction="http://tempuri.org/IPeopleService/GetPersonResponse")]
-        WcfServiceExample.Client.ServiceReference1.Person GetPerson(int id);
+        Person GetPerson(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPeopleService/GetPerson", ReplyAction="http://tempuri.org/IPeopleService/GetPersonResponse")]
-        System.Threading.Tasks.Task<WcfServiceExample.Client.ServiceReference1.Person> GetPersonAsync(int id);
+        System.Threading.Tasks.Task<Person> GetPersonAsync(int id);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPeopleService/AddPerson", ReplyAction="http://tempuri.org/IPeopleService/AddPersonResponse")]
-        bool AddPerson(WcfServiceExample.Client.ServiceReference1.Person person);
+        bool AddPerson(Person person);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/IPeopleService/AddPerson", ReplyAction="http://tempuri.org/IPeopleService/AddPersonResponse")]
-        System.Threading.Tasks.Task<bool> AddPersonAsync(WcfServiceExample.Client.ServiceReference1.Person person);
+        System.Threading.Tasks.Task<bool> AddPersonAsync(Person person);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public interface IPeopleServiceChannel : WcfServiceExample.Client.ServiceReference1.IPeopleService, System.ServiceModel.IClientChannel {
+    public interface IPeopleServiceChannel : IPeopleService, System.ServiceModel.IClientChannel {
     }
     
     [System.Diagnostics.DebuggerStepThroughAttribute()]
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
-    public partial class PeopleServiceClient : System.ServiceModel.ClientBase<WcfServiceExample.Client.ServiceReference1.IPeopleService>, WcfServiceExample.Client.ServiceReference1.IPeopleService {
+    public partial class PeopleServiceClient : System.ServiceModel.ClientBase<IPeopleService>, IPeopleService {
         
         public PeopleServiceClient() {
         }
@@ -134,19 +133,19 @@ namespace WcfServiceExample.Client.ServiceReference1 {
                 base(binding, remoteAddress) {
         }
         
-        public WcfServiceExample.Client.ServiceReference1.Person GetPerson(int id) {
+        public Person GetPerson(int id) {
             return base.Channel.GetPerson(id);
         }
         
-        public System.Threading.Tasks.Task<WcfServiceExample.Client.ServiceReference1.Person> GetPersonAsync(int id) {
+        public System.Threading.Tasks.Task<Person> GetPersonAsync(int id) {
             return base.Channel.GetPersonAsync(id);
         }
         
-        public bool AddPerson(WcfServiceExample.Client.ServiceReference1.Person person) {
+        public bool AddPerson(Person person) {
             return base.Channel.AddPerson(person);
         }
         
-        public System.Threading.Tasks.Task<bool> AddPersonAsync(WcfServiceExample.Client.ServiceReference1.Person person) {
+        public System.Threading.Tasks.Task<bool> AddPersonAsync(Person person) {
             return base.Channel.AddPersonAsync(person);
         }
     }
